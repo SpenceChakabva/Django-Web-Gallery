@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="Spencer A Chakabva ">
+        <title>Album example for Bootstrap</title>
+        <!-- Bootstrap core CSS -->
+        <link href="{% static 'bootstrap/css/bootstrap.css' %}" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+        <style type="text/css">
+            #id_tags{
+                overflow-y: scroll;
+                max-height: 100px;
+                border-radius: 5px;
+                padding: 5px;
+            }
+        </style>
+    </head>
+<body>
+
+    {% include 'base/navbar.html' %}
+
+    {% block content %}
+    <!-- Content goes here -->
+    {% endblock content %}
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/popper.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>  
+</body>
+</html>

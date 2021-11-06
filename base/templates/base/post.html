@@ -1,0 +1,16 @@
+{% extends 'base/main.html' %}
+{% load static %}
+{% block content %}
+
+<section class="jumbotron text-center">
+    <p class="float-left"> <a href="{% url 'home' %}">&laquo</a> </p>
+    <div class="container">
+        <img class="post-cover" src="{{ post.thumbnail.url }}">
+        <h1 class="jumbotron-heading">{{post.title}}&nbsp;</h1>
+        <p class="lead text-muted">{{post.body|safe}}</p>
+        <small class="lead text-muted">{{post.created}}</small>
+    </div>
+    
+</div>
+
+{% endblock content %}
